@@ -48,3 +48,20 @@ class Solution {
     }
 }
 ```
+
+
+```swift
+class Solution {
+    func subsets(_ nums: [Int]) -> [[Int]] {
+        var result = [[Int]].init([[]])
+        for n in nums {
+            for i in 0..<result.count {
+                var temp = result[i]
+                temp.append(n)
+                result.append(temp)
+            }
+        }
+        return result
+    }    
+}
+```
